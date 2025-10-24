@@ -22,27 +22,27 @@ Trong chương trình đào tạo **Tovchain**, mỗi học viên hoàn thành k
 | Hardhat     | 2.26.3    |
 | Node.js     | 20.19.5   |
 | Ethers.js   | 6.15.0    |
-| Solidity    | ^0.8.0    |
-npm init -y
-npm install --save-dev hardhat@2.26.3
-npx hardhat
+| Solidity    | ^0.8.0    |  
+npm init -y  
+npm install --save-dev hardhat@2.26.3  
+npx hardhat  
 
 ---
 
 ## 3. Deployment
 
-npx hardhat compile
-npx hardhat test
+npx hardhat compile  
+npx hardhat test  
 
-npx hardhat node
-npx hardhat run scripts/deploy.js --network localhost
+npx hardhat node  
+npx hardhat run scripts/deploy.js --network localhost  
 
-npx hardhat run scripts/deploy.js --network sepolia
-#PRIVATE_KEY="YOUR_WALLET_PRIVATE_KEY"
-#SEPOLIA_RPC_URL="https://sepolia.infura.io/v3/YOUR_INFURA_KEY"
+npx hardhat run scripts/deploy.js --network sepolia  
+#PRIVATE_KEY="YOUR_WALLET_PRIVATE_KEY"  
+#SEPOLIA_RPC_URL="https://sepolia.infura.io/v3/YOUR_INFURA_KEY"  
 
-npm install -g live-server
-live-
+npm install -g live-server  
+live-server
 
 
 
