@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tovchain Full On-Chain Certificate Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Tovchain Training Certificate</h1>
+            <p class="subtitle">Full On-Chain Soulbound NFT Certificate System</p>
+        </header>
+
+        <!-- Connection Status -->
+        <div class="card connection-card">
+            <h2>Kết nối</h2>
+            <div id="connectionStatus" class="status-box">
+                <p>Chưa kết nối ví</p>
+            </div>
+            <button id="connectBtn" class="btn btn-primary">Kết nối MetaMask</button>
+            <div id="accountInfo" class="account-info" style="display: none;">
+                <p><strong>Địa chỉ:</strong> <span id="accountAddress"></span></p>
+                <p><strong>Network:</strong> <span id="networkName"></span></p>
+            </div>
+        </div>
+
+        <!-- Contract Info -->
+        <div class="card">
+            <h2>Thông tin Contract</h2>
+            <div class="form-group">
+                <label for="contractAddress">Contract Address:</label>
+                <input type="text" id="contractAddress" placeholder="0x..." value="">
+                <button id="loadContractBtn" class="btn btn-secondary">Load Contract</button>
+            </div>
+            <div id="contractInfo" style="display: none;">
+                <p><strong>Tên:</strong> <span id="contractName"></span></p>
+                <p><strong>Symbol:</strong> <span id="contractSymbol"></span></p>
+                <p><strong>Owner:</strong> <span id="contractOwner"></span></p>
+                <p><strong>Total Supply:</strong> <span id="totalSupply"></span></p>
+            </div>
+        </div>
+
+        <!-- Issue Certificate (Owner Only) -->
+        <div class="card" id="ownerSection" style="display: none;">
+            <h2>Phát hành Certificate (Owner Only)</h2>
+            
+            <div class="form-group">
+                <label for="recipientAddress">Địa chỉ người nhận:</label>
+                <input type="text" id="recipientAddress" placeholder="0x...">
+            </div>
+            <div class="form-group">
+                <label for="studentName">Tên học viên:</label>
+                <input type="text" id="studentName" placeholder="Nguyen Van A">
+            </div>
+            <div class="form-group">
+                <label for="courseName">Tên khóa học:</label>
+                <input type="text" id="courseName" placeholder="Blockchain Development Bootcamp">
+            </div>
+            <div class="form-group">
+                <label for="grade">Xếp loại:</label>
+                <select id="grade">
+                    <option value="Excellent">Excellent (Xuất sắc)</option>
+                    <option value="Good">Good (Giỏi)</option>
+                    <option value="Pass">Pass (Đạt)</option>
+                </select>
+            </div>
+            <button id="issueCertificateBtn" class="btn btn-success">Phát hành Certificate</button>
+        </div>
+
+        <!-- Check Certificate -->
+        <div class="card">
+            <h2>Tra cứu Certificate</h2>
+            <div class="form-group">
+                <label for="checkAddress">Địa chỉ cần tra cứu:</label>
+                <input type="text" id="checkAddress" placeholder="0x...">
+                <button id="checkCertificateBtn" class="btn btn-secondary">Tra cứu</button>
+            </div>
+            <div id="certificateResult" style="display: none;">
+                <div class="result-box">
+                    <h3>Kết quả:</h3>
+                    <p><strong>Trạng thái:</strong> <span id="hasReceived"></span></p>
+                    <div id="certificateDetails" style="display: none;">
+                        <p><strong>Token ID:</strong> <span id="tokenId"></span></p>
+                        <div id="certificatePreview" class="certificate-info"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Certificate -->
+        <div class="card" id="mySection" style="display: none;">
+            <h2>Certificate của tôi</h2>
+            <div id="myCertificate" class="certificate-info"></div>
+        </div>
+
+        <!-- Revoke Certificate (Owner Only) -->
+        <div class="card" id="revokeSection" style="display: none;">
+            <h2>Thu hồi Certificate (Owner Only)</h2>
+            <div class="form-group">
+                <label for="revokeTokenId">Token ID cần thu hồi:</label>
+                <input type="number" id="revokeTokenId" placeholder="0">
+                <button id="revokeCertificateBtn" class="btn btn-danger">Thu hồi Certificate</button>
+            </div>
+            <small style="color: #ef4444;"></small>
+        </div>
+
+        <!-- Transaction Log -->
+        <div class="card">
+            <h2>Lịch sử giao dịch</h2>
+            <div id="txLog" class="tx-log"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
