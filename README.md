@@ -6,7 +6,7 @@
 Blockchain là một hệ thống cơ sở dữ liệu phi tập trung, cho phép lưu trữ và xác minh thông tin một cách minh bạch, không thể thay đổi. Mỗi khối (block) chứa dữ liệu được liên kết với khối trước đó tạo thành chuỗi (chain), đảm bảo tính bảo mật và toàn vẹn của thông ti
 
 ### 🤖 Smart Contract
-Smart Contract (hợp đồng thông minh) là đoạn mã được triển khai trên blockchain, cho phép thực thi tự động các điều khoản khi điều kiện được thỏa mãn. Trong dự án này, smart contract chịu trách nhiệm quản lý việc cấp phát NFT cho người dùng sau khi hoàn thành khóa
+Smart Contract (hợp đồng thông minh) là đoạn mã được triển khai trên blockchain, cho phép thực thi tự động các điều khoản khi điều kiện được thỏa mãn. Trong dự án này, smart contract chịu trách nhiệm quản lý việc cấp phát NFT cho người dùng sau khi hoàn thành
 ### 🧬 Chuẩn ERC721
 ERC721 là tiêu chuẩn cho **Non-Fungible Token (NFT)** trên Ethereum, đại diện cho các tài sản kỹ thuật số duy nhất và không thể hoán đổi lẫn nhau. Mỗi token có **ID riêng biệt** và thuộc quyền sở hữu của một địa chỉ duy nhất.
 
